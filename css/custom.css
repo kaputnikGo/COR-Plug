@@ -1,0 +1,1073 @@
+/*
+COR 2015 custom  css
+to override TentyFourteen theme css
+
+Branding colours: 
+masthead: #303e48
+key text: #daf543 (lime green)
+button: #71b726 (pre-gradient)
+link hover: #5bac0e
+sidebar: #f4f4f4
+footer: #ececec
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+
+/************************************* 
+*
+*	TwentyFourteen style.css overrides 
+*
+**************************************/
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #333;
+	font-family: Noto Sans, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	color: #41a62a;
+}
+
+.site:before {
+	width: 0;
+}
+
+.site {
+	background-color: #fff;
+	max-width: 100%;
+	position: relative;
+}
+
+.entry-content,
+.entry-summary,
+.page-content {
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	-ms-hyphens:     none;
+	hyphens:         none;
+	word-wrap: normal;
+}
+
+.hentry {
+	margin: 0 auto 48px;
+	max-width: 100%;
+	
+}
+
+.site-content .entry-header,
+.site-content .entry-content,
+.site-content .entry-summary,
+.site-content .entry-meta,
+.page-content {
+	margin: 0 auto;
+	max-width: 80%;
+}
+
+#secondary {
+	width: 0;
+}
+.search-field {
+	display: none;
+}
+
+.search-submit {
+	display: none;
+}
+
+#supplementary {
+	padding: 2% 8% 2% 8.3%;
+}
+
+.site-header {
+	background-color: #303e48;
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	height: 120px;
+	z-index: 100;
+}
+
+.header-main {
+	min-height: 48px;
+	padding: 0 10px;
+}
+
+.content-sidebar {
+	background-color: #f4f4f4;
+	display: block;
+	float: left;
+	margin-top: 16px;
+	margin-left: 8%;
+	margin-bottom: 16px;
+	width: 30%;
+	max-width: 300px;
+	max-height: 606px;
+	border: 0;
+	padding: 10px 20px 10px;
+	border-radius: 6px;	
+}
+
+.content-sidebar .widget .widget-title {
+	border-top: 0;
+	color: #2b2b2b;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 18px;
+	padding-top: 7px;
+	text-transform: none;
+}
+
+.content-sidebar .widget input[type="button"],
+.content-sidebar .widget input[type="reset"],
+.content-sidebar .widget input[type="submit"] {
+	background-color: #71b726;
+	border: 0;
+	color: #fff;
+}
+
+/* Primary Sidebar, Footer Sidebar */
+.widget {
+	font-size: 14px;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	line-height: 1.2857142857;
+	width: 100%;
+	word-wrap: break-word;
+	padding-bottom: 20px;
+}
+
+.widget button,
+.widget .button,
+.widget input[type="button"],
+.widget input[type="reset"],
+.widget input[type="submit"] {
+	background-color: #71b726;
+	border: 0;
+	font-size: 12px;
+	padding: 10px 15px 10px;
+}
+
+.widget p {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 12px;
+	margin-bottom: 18px;
+}
+
+.widget a {
+	color: #303e48;
+}
+
+.widget a:hover {
+	color: #41a62a;
+}
+
+.widget_nav_menu li {
+	border-top: 0;
+	padding: 8px 0 9px;
+}
+
+.footer-sidebar .widget .widget-title,
+.primary-sidebar .widget .widget-title {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.6363636363;
+	margin: 0 0 6px 0;
+	color: #303e48;
+	text-transform: none;
+}
+
+.site-footer {
+	background-color: #ececec;
+	font-size: 12px;
+	position: relative;
+	z-index: 3;
+}
+
+
+/*************************************
+*
+*	custom content display, 
+*	cor index page and corissue posts
+*
+**************************************/
+
+.headerLogoLink {
+	background:transparent;
+   	border:none;
+   	outline:none;
+    display:block;
+	position:relative;
+	margin: auto;
+	margin-left: 16.6%;
+    height:77px;
+    width:67px;
+    cursor:pointer;
+}
+
+.headerLogo {
+	width: auto;
+	height: 67px;
+	padding-top: 28px;
+}
+
+
+
+.logoutBlock {
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-top: -44px;
+	margin-right: 50%;
+}
+
+.logoutBlock a {
+	font-family: 'Noto Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #fff;
+}
+
+.logoutBlock a:hover {
+	color: #daf543
+}
+
+.portnerLogoLink {
+	background:transparent;
+   	border:none;
+   	outline:none;
+    display:block;
+	position:relative;
+	margin-right: 12%;
+	margin-top: -40px;
+	float: right;
+	height: 40px;
+	width: 142px;	
+    cursor:pointer;
+}
+
+.portnerLogo {
+	height: 40px;
+	width: 142px;
+}
+
+.indexHeader {
+	position: relative;
+	z-index: 15;
+	width: 100%;
+	min-height: 220px;
+}
+
+.agoraLogin {
+	display: block;
+	position: absolute;
+	margin-left: 16.6%;
+}
+
+.agoraLoginPage {
+	display: block;
+	position: relative;
+	background-color: #303e48;
+	width: 380px;
+	height: 300px;
+	padding-left: 12%;
+	padding-top: 1%;
+	margin-top: 3%;
+	margin-bottom: 20px;
+	margin-left: 8.3%;
+	border-radius: 12px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+}
+
+.indexImage {
+	background-color: #000;
+	width: 100%;
+	min-width: 900px;
+	height: auto;
+	min-height: 260px;
+}
+
+.indexMain {
+	display: block;
+	width: 100%;
+	padding-top: 50px;
+}
+
+.indexContent {
+	display: block;
+	margin: auto;
+	width: 84%;
+	max-width: 900px;
+	float: left;
+	margin-left: 2%;
+}
+
+.indexAvatar {
+	float: left;
+	padding-right: 24px;
+	padding-top: 28px;
+}
+
+.indexEditor {
+	display: inline-block;
+    margin: 0 auto;
+    width: 270px;
+	float: left;
+}
+
+.indexAdvisor {
+	float: left;
+	width: 270px;
+	padding-left: 20px;
+}
+
+.indexPortner {
+	float: left;
+	width: 84%;
+	margin-top: 24px;
+}
+
+.indexTitle {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #333;
+	transform : scale(1,1.3);
+	-webkit-transform:scale(1,1.3); /* Safari and Chrome */
+	-moz-transform:scale(1,1.3); /* Firefox */
+	-ms-transform:scale(1,1.3); /* IE 9+ */
+	-o-transform:scale(1,1.3); /* Opera */
+}
+
+.indexCopy {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #333;
+}
+
+#issueWrapper {
+	display: block;
+	margin-left: 8.3%;
+	float: left;
+	width: 60%;
+}
+	
+.issueTitle {
+	padding-top:50px;
+}
+
+.issuePageHeader {
+	display: block;
+	width:100%;
+	position:relative;
+	background: #000;
+	height:120px;
+}
+
+.issuePageTitle {
+	position: absolute;
+	top: 6px;
+	z-index: 15;
+	color: #daf543;
+	font-family: 'Oswald', sans-serif;
+	font-size: 26pt;
+	font-weight: 300;
+	line-height: 100%;
+}
+
+.issuePageImage {
+	background-color: #000;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.listUnit {
+	float: left;
+	width: 100%;	
+}
+
+.issueHeaderWrapper {
+	width:100%;
+}
+
+.issueHeader {
+	font-size: 17px;
+	font-weight: 700;
+	color: #000;
+	padding-right: 10px;
+}
+
+.issueDate {
+	font-size: 12px;
+	color: #333333;
+	text-transform: uppercase;
+}
+
+.issueListWrapper {
+	width: 100%;
+	border-bottom: #959595 solid 3px;
+	margin-top:15px;
+	margin-bottom: 58px;
+	padding-top:20px;
+}
+
+.hrListTop {
+	background-color: #959595;
+	border: 0;
+	width: 100%;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.issueThumb {
+	float:left;
+	width: 124px;
+	height: 175px;
+	padding-top: 18px;
+}
+
+.fullIssue {
+	font-size: 14px;
+	font-weight: 700;
+	color: #333333;
+	margin-top: 12px;
+}
+
+.fullIssue ul {
+	margin-bottom:0px;
+}
+
+.issueList {
+	float: right;
+	color: #333333;
+	font-size: 14px;
+	line-height: 2.5;
+	width: 74%;
+}
+
+.issueList ul {
+	list-style-image: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/downArrow.png');
+	
+}
+
+[class*='icon'] > a:after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+}       
+.iconPdf > a:after{
+	background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/icon_pdf.jpg') no-repeat top right;
+}
+.iconDoc > a:after{
+    background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/iconWord.jpg') no-repeat top right;
+}
+/*
+.iconPpt > a:after{
+    background: url('/wp-content/uploads/2014/08/icon_ppt.jpg') no-repeat top right;
+}
+*/
+.iconXls > a:after{
+    background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/iconExcel.jpg') no-repeat top right;
+}
+
+.portnerPressFooter {
+	padding-top: 4px;
+	text-align: right;
+	color: #303e48;
+}
+
+.copyright {
+	padding-bottom: 16px;
+}
+
+.socialMediaIcons  {
+	padding: 15px 0 15px 0;
+}
+
+/**************
+
+	Agora login
+
+**************/
+
+.mw_login {
+	width: 300px;
+	margin-top: 3%;		
+}
+		
+.mw_login .title {
+	color:#daf543; 
+	font-size:20px;
+	font-family: 'Noto Sans', sans-serif;			
+	font-weight: 700;
+	transform : scale(1,1.3);
+	-webkit-transform:scale(1,1.3); /* Safari and Chrome */
+	-moz-transform:scale(1,1.3); /* Firefox */
+	-ms-transform:scale(1,1.3); /* IE 9+ */
+	-o-transform:scale(1,1.3); /* Opera */
+	padding-bottom: 4%;
+}
+
+.mw_login .userWelcome {
+	color:#fff;
+	font-size:14px;
+	font-family: 'Noto Sans', sans-serif;			
+	font-weight: 400;
+}
+
+.mw_login .userGoto {
+	color:#daf543;
+	font-size:18px;
+	font-family: 'Noto Sans', sans-serif;			
+	font-weight: 700;
+}
+		
+.mw_login p {
+	font-size: 12px;
+	color: #fff;
+	margin-bottom: 12px;
+}
+
+.mw_login a {
+	text-decoration: none;
+}
+
+.mw_login .error {
+	font-size: 12px;
+	font-weight: bold;
+	color: red;
+}
+		
+.mw_loginform {
+	padding-left: 0;
+	padding-right: 0;
+}
+		
+.user-login {
+	display: none;
+}
+		
+.mw_loginform input[type='text'] {
+	float: left;
+	width: 100%;
+	height: 30px;
+	padding: 2px 8px;
+	border: 1px solid black;
+	font-size: 16px;
+}
+		
+.mw_loginform input[type='password'] {
+	width: 100%;
+	height: 30px;
+	margin-top: 12px;
+}
+		
+.login-submit {
+	width: 80px;
+	height: 36px;
+}
+		
+.login-submit input[type="submit"] {
+	width: 80px;
+	height: 36px;
+	float: left;
+	padding: 4px 20px 4px;
+	background-color: #71b726;
+	border: 0;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+		
+.login-submit input[type="submit"]:hover, 
+.login-submit input[type="submit"]:focus {
+	background-color: #5bac0e;
+	color: #ffffff;
+}
+		
+.mw_forgot {
+	position: relative;
+	display: block;
+	width: 66%;
+	float: right;
+	text-align: left;
+	padding-top: 4px;
+	margin-top: -50px;
+}
+		
+.mw_forgot_link  {
+	font-size: 10px;
+	font-weight: bold;
+	color: #fff;
+}
+		
+.subsHere  {
+	font-size: 12px;
+	color: #daf543;
+	float:right;
+	padding-top: 5px;	
+}
+		
+.mw_login .error{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff0000;
+}	
+
+
+#mw_reset{
+	display: block;
+	position: relative;
+	background-color: #303e48;
+	width: 400px;
+	height: 200px;
+	padding: 25px;
+	margin: 60px auto 60px;
+	border-radius: 12px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+}
+	
+#mw_reset .error {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	padding-top: 8px;
+}
+	
+.mw_resetform {
+	display: block;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#mw_reset label{
+	width: 50%;
+	display: block;
+	float: left;
+	text-align: left;
+	margin-right: 10px;
+}
+	
+#mw_reset  p.reset-email {
+	padding-top: 1px;
+	padding-left: 12px;
+	margin-bottom: 12px;
+	color: #fff;
+	font-size: 16px;
+}
+	
+#mw_reset input[type='text'] {
+	float: left;
+	width: 250px;
+	height: 30px;
+	margin: 4px 0px;
+	padding: 2px 8px;
+	border: 1px solid black;
+	font-size: 16px;	
+}
+	
+#mw_reset .reset-submit input[type="submit"] {
+	position: relative;
+	height: 30px;
+	float: right;
+	margin: -34px 0 0 190px;
+	padding: 4px 24px;
+	background-color: #71b726;
+	border: 0;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+	
+#mw_reset .reset-submit input[type="submit"]:hover, 
+#mw_reset .reset-submit input[type="submit"]:focus {
+	background-color: #5bac0e;
+	color: #ffffff;
+}
+
+#mw_reset h2{
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	text-align: center;
+	margin: 6px auto;
+	color: #fff;
+}
+
+#mw_reset .remember_fieldgroup{
+
+}
+
+/******************************************************
+*
+*	custom media queries + style.css overrides
+*
+*******************************************************/
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+@media screen and (max-width: 399px) {
+	.site {
+		min-width: 399px;
+	}
+	
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.headerLogoLink {
+		margin-left: 8.3%;
+	}	
+	
+	.listUnit {
+		margin-left: 2%;
+	}
+	
+	.issueListWrapper {
+		width: 88%;
+	}
+	
+	.issueList {
+		width: 100%;
+	}
+	
+	.issueThumb {
+		display: none;
+	}
+	
+	.indexContent {
+		min-width: 399px;
+	}
+	
+	.indexAvatar {
+		display: none;
+	}
+	
+	.indexAdvisor {
+		float: left;
+		padding-left: 0;
+		margin-left: 0;
+	}
+	
+	#mw_reset input[type="submit"] {
+		margin: -44px 0 0 190px !important;
+	}
+
+}
+
+@media screen and (min-width: 400px) {
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.headerLogoLink {
+		margin-left: 8.3%;
+	}
+	
+	.agoraLogin {
+		margin-left: 8.3%;
+	}	
+	
+	.issueList {
+		width: 100%;
+	}
+	
+	.indexContent {
+		min-width: 400px;
+		width: 90%;
+		margin-left: 8.3%;
+	}
+	
+	.indexAvatar {
+		display: none;
+	}
+	
+	.indexAdvisor {
+		float: left;
+		padding-left: 1%;
+		margin-left: 0;
+	}
+}
+
+
+@media screen and (max-width: 673px) {
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.indexContent {
+		width: 90%;
+		margin-left: 2%;
+	}
+	
+	.indexAvatar {
+		display: none;
+	}
+	
+	.indexEditor {
+		margin-left: 8.3%;
+	}
+	
+	.indexAdvisor {
+		float: left;
+		margin-left: 8.3%;
+		margin-top: 40px;
+	}
+	
+	.listUnit {
+		margin-left: 8.3%;
+	}
+	
+	.issueListWrapper {
+		width: 88%;
+		max-width: 620px;
+	}
+	
+	.issueThumb {
+		display: none;
+	}
+	
+	.issueList {
+		width: 100%;
+	}
+	
+	#secondary,
+	#supplementary {
+		padding: 2% 8% 2% 16.6%;
+	}
+	
+	.content-sidebar {
+		border: 0;
+		position: relative;
+		padding: 10px 20px 10px;
+		width: 300px;
+		margin-bottom: 8px;
+		margin-left: 0;
+	}	
+
+	.portnerPressFooter,
+	.ppFooterLogo {
+		padding-top: 20px;
+		padding-bottom: 16px;
+		float: left;
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 783px) {
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.headerLogoLink {
+		margin-left: 8.3%;
+	}
+	
+	.indexAvatar {
+		display: none;
+	}
+	
+	.issueList {
+		width: 100%;
+	}
+}
+
+
+@media screen and (min-width: 810px) {
+	.indexContent {
+		width: 90%;
+		margin-left: 8.3%;
+	}
+	
+	.indexAdvisor {
+		margin-top: 0;
+		float: left;
+		margin-left: 2%;
+	}
+	
+	.indexAvatar {
+		display: block;
+	}
+	
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.issueList {
+		float: left;
+		width: 100%;
+	}
+}
+	
+/*
+* 
+*	Major break point for corissues layout (900-901px)
+*
+*/
+
+@media screen and (max-width: 900px) {	
+	.headerLogoLink {
+		margin-left: 8.3%;
+	}
+	
+	.headerWrapper {
+		margin-left: 8.3%;
+	}
+	
+	.indexContent {
+		width: 90%;
+		margin-left: 8.3%;
+	}
+	
+	.indexAdvisor {
+		margin-left: 6%;
+	}
+	
+	#issueWrapper {
+
+	}
+
+	
+	.issueThumb {
+		display: none;
+	}
+	
+	.issueListWrapper {
+		width: 100%;
+	}
+	
+	.issueList {
+		float: left;
+		width: 100%;
+	}
+	
+	.listUnit {
+		width: 80%;
+		margin-left: 4%;
+	}
+	
+	.portnerPressFooter {
+		float: left;
+		text-align: left;
+	}
+	
+	#supplementary {
+		padding: 2% 8% 2% 16.6%;
+	}
+	
+	.content-sidebar {
+		border: 0;
+		position: relative;
+		padding: 10px 20px 10px;
+		width: 300px;
+		float: left;
+		margin-left: 8.3%;
+		margin-bottom: 8px;
+	}
+}
+
+@media screen and (min-width: 901px) {	
+	.headerLogoLink {
+		margin-left: 16.6%;
+	}
+	
+	.portnerLogoLink {
+		margin-right: 20%;
+	}
+	
+	.headerWrapper {
+		margin-left: 16.6%;
+	}
+	
+	.agoraLogin {
+		margin-left: 16.6%;
+	}
+	
+	.issueThumb {
+		display: block;
+	}
+	
+	.issueList {
+		float: right;
+		width: 66%;
+	}
+	
+	.indexContent {
+		margin-left: 16.6%;
+	}
+	
+	.indexAvatar {
+		display: block;
+	}
+	
+	.indexAdvisor {
+		margin-left: 6%;
+	}
+	
+	.textwidget {
+		padding-top: 0;
+	}
+	
+	#supplementary {
+		padding: 2% 16% 2% 16.6%;
+	}
+	
+	.content-sidebar {
+		margin-left: 2%;
+	}
+	
+	.footer-sidebar .widget {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing:    border-box;
+		box-sizing:         border-box;
+		float: left;
+		padding: 0;
+		width: 25%;
+	}
+	
+	.mw_login {
+		margin-top: 12%;		
+	}
+	
+	/*
+	#secondary {
+		display: none;
+	}
+	*/
+}
