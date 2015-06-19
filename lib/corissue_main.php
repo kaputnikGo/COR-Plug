@@ -26,6 +26,25 @@ function create_new_post_type_corissue() {
     register_post_type('corissue', $args);
 }
 
+// create Insights posts type with item on wp-admin page menu
+function create_new_post_type_insights() {
+    $labels = array(
+        'name'           => __('Insights'),
+        'singular_name'  => __('Insights'),
+    );
+    $args = array(
+        'labels'         => $labels,
+        'public'         => true,
+        'has_archive'    => true,
+        'menu_position'  => 3,
+        'description'    => 'Industry Insights',
+        'supports'       =>
+            array( 'title',
+                'comments', 'editor',
+                'thumbnail', 'custom-fields', 'revisions'),
+    );
+    register_post_type('insights', $args);
+}
 
 //list all the COR Issue posts on the COR Plug admin page - for debugging.
 function return_corissue_posts_list() {

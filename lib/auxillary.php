@@ -48,4 +48,30 @@ function get_corissue_posts_list() {
 		}
 	}
 }
+
+/***************************************************/
+
+//	ARCHIVED
+
+/****************************************************/
+
+/*
+// redirect to this url
+function agora_login_redirect() {
+	$latestArgs = array( 'numberposts' => 1, 'post_type' => 'corissue', 'order' => 'ASC' , 'post_status' => 'publish' );			
+	$latestAdviser = wp_get_recent_posts( $latestArgs );
+	$redirectLink = get_permalink( $latestAdviser->ID );
+	Logger( 'redirectLink: ' . $redirectLink );
+	//$location = $_SERVER['HTTP_REFERER'];
+	wp_safe_redirect( $redirectLink );
+	exit();
+}
+*/
+/*
+if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || 
+		(isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+	add_filter('login_redirect', 'agora_login_redirect', 10, 3);
+}
+*/
+
 ?>

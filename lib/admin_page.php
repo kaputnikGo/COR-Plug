@@ -47,17 +47,22 @@
 </style>
 
 <div class="wrap">
-	<h1 class="plugheading">COR Plug administration page</h1>
+	<h1 class="plugheading">COR Plug administration page - PRODUCTION VERSION</h1>
 	<p class="plugtext">Installation list for COR 2015 theme:<br />
 	<em><strong>single-corissue.php, sidebar-corissue.php, header-corissue.php</strong>
 	<br />
-	<strong>index-page.php, page.php, header.php, footer.php</strong>
-	<br />
-	<strong>custom.css</strong></em>
+	<strong>index-page.php, custom.css</strong></em>
+	<br /><br />
+	template files added:
+	</br />
+	<strong>email-page.php, bulletin-page.php, landing-page.php, thankyou-page.php, footer-email.php, footer-simple.php, footer-landing.php
+	header-bulletin.php, header-simple.php</strong>
 	<br /><br />
 	additions made to the following theme files:
 	<br />
-	<strong>images.php, 404.php, theme/js/function.js</strong>
+	<strong>image.php, attachment.php, 404.php, theme/js/function.js</strong>
+	<br />
+	<strong>index.php, content-none.php, page.php, header.php, footer.php</strong>
 	<br /><br />
 	<strong>FUNCTION LIST FOR COR ISSUE POSTS:</strong>
 	<br />
@@ -76,6 +81,9 @@
 	<em>after theme setup, show admin bar false for non-admins</em>
 	<br />
 	<br />
+	<strong>Custom post Insights (insights)</strong>
+	<br />
+	<em>template files and custom post type for Industry Insights, archive-insights.php template, custom excerpt and length=17, has_archive = true</em>  
 	</p>
 <!-- start of options form -->
 

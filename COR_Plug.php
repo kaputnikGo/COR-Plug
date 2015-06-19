@@ -2,8 +2,8 @@
 /**
  * Plugin Name: COR Plug
  * Plugin URI: http://www.coradviser.com.au
- * Description: Add functions to COR 2015 theme - DEVELOPMENT VERSION.
- * Version: 1.1.6
+ * Description: Add functions to COR 2015 theme. Production Version.
+ * Version: 1.3.5
  * Author: MA_PPP
  * Author URI: http://www.portphillippublishing.com.au
  * Text Domain: twentyfourteen
@@ -12,7 +12,7 @@
  * License: GPL2
  */
  
-/*  Copyright 2015  MA_PPP  (email : kaputnikgo@gmail.com)
+/*  Copyright 2015  MA_PPP  (email : noone@mail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -41,7 +41,7 @@ init_admin_page();
 
 define( 'COR_PLUG_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'COR_PLUG_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'COR_PLUG_VERSION', '1.1.6' );
+define( 'COR_PLUG_VERSION', '1.3.5' );
 
 // library functions called here
 require_once( COR_PLUG_DIR_PATH . 'lib/function_list.php' );
@@ -54,36 +54,28 @@ function register_plugin_addons() {
 	add_action( 'admin_menu', 'initialise_menu' );
 	// corissue_main.php
 	add_action( 'init', 'create_new_post_type_corissue' );
+  add_action( 'init', 'create_new_post_type_insights' );
 	// auxillary.php
 	add_filter( 'widget_text', 'execute_php', 100 );
 	// this
 	add_action('after_setup_theme', 'remove_admin_bar');
-	//this, conditional
-	/*
-	if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || 
-		(isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
-		add_filter('login_redirect', 'agora_login_redirect', 10, 3);
-	}
-	*/
+  // this
+  add_filter( 'excerpt_more', 'custom_excerpt_more', 100 );
+  // this
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+	//
 }
 
 function initialise_menu() {
-	add_menu_page( 	'COR_Plug', 'COR Plug', 'manage_options', 'cor_plug', 
-				'init_admin_page', COR_PLUG_DIR_URL . 'plug_icon.png', 4.4 );	
+	add_menu_page( 	
+				'COR_Plug', 
+				'COR Plug', 
+				'manage_options', 
+				'cor_plug', 
+				'init_admin_page', 
+				COR_PLUG_DIR_URL . 'plug_icon.png', 4.4 
+				);
 }
-
-/*
-// redirect to this url
-function agora_login_redirect() {
-	$latestArgs = array( 'numberposts' => 1, 'post_type' => 'corissue', 'order' => 'ASC' , 'post_status' => 'publish' );			
-	$latestAdviser = wp_get_recent_posts( $latestArgs );
-	$redirectLink = get_permalink( $latestAdviser->ID );
-	Logger( 'redirectLink: ' . $redirectLink );
-	//$location = $_SERVER['HTTP_REFERER'];
-	wp_safe_redirect( $redirectLink );
-	exit();
-}
-*/
 
 // remove admin bar for non-admins
 function remove_admin_bar() {
@@ -98,11 +90,17 @@ function init_admin_page() {
 	}
 	// call the admin_page.php
 	echo file_get_contents( COR_PLUG_DIR_PATH . 'lib/admin_page.php' );
-	echo '<br /><br />COR Plug version: ' . COR_PLUG_VERSION . '<br /><br />';
+	echo '<br /><br />COR Plug version: <strong>' . COR_PLUG_VERSION . '</strong><br /><br />';
 	echo '<br />debug:<br />';
 	get_corissue_posts_list();
 	echo 'end debug.<br />';
-	
 }
 
+// functions for excerpts in article/insights template pages
+function custom_excerpt_length( $length ) {
+	return 17;
+}
+function custom_excerpt_more( $more ) {
+	return '&hellip; <a class="more-link" href="' . get_permalink( get_the_ID() ) . '"> Read more&hellip;</a>';
+}
 ?>

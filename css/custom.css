@@ -2,8 +2,12 @@
 COR 2015 custom  css
 to override TentyFourteen theme css
 
+version 1.1.11
+
 Branding colours: 
 masthead: #303e48
+banner: #030202
+menubar: #10181f
 key text: #daf543 (lime green)
 button: #71b726 (pre-gradient)
 link hover: #5bac0e
@@ -30,7 +34,7 @@ select,
 textarea {
 	color: #333;
 	font-family: Noto Sans, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.5;
 }
@@ -66,7 +70,7 @@ a:hover {
 }
 
 .hentry {
-	margin: 0 auto 48px;
+	margin: 0 auto 24px;
 	max-width: 100%;
 	
 }
@@ -80,9 +84,18 @@ a:hover {
 	max-width: 80%;
 }
 
-#secondary {
-	width: 0;
+.wp-post-image {
+	width: 644px;
+	height: auto;
 }
+
+
+#secondary {
+	display: none;
+  width: 0;
+  height: 0;
+}
+
 .search-field {
 	display: none;
 }
@@ -92,18 +105,15 @@ a:hover {
 }
 
 #supplementary {
-	padding: 2% 8% 2% 8.3%;
+  max-width: 950px;
 }
-
 .site-header {
 	background-color: #303e48;
-	position: relative;
-	max-width: 100%;
 	width: 100%;
+  max-width: 100%;
 	height: 120px;
 	z-index: 100;
 }
-
 .header-main {
 	min-height: 48px;
 	padding: 0 10px;
@@ -112,13 +122,13 @@ a:hover {
 .content-sidebar {
 	background-color: #f4f4f4;
 	display: block;
-	float: left;
-	margin-top: 16px;
-	margin-left: 8%;
-	margin-bottom: 16px;
+	float: right;
+  margin-top: 16px;
+/*	margin-left: 8%; */
+	margin-bottom: 46px;
 	width: 30%;
-	max-width: 300px;
-	max-height: 606px;
+/*	max-width: 300px;
+	max-height: 564px; */
 	border: 0;
 	padding: 10px 20px 10px;
 	border-radius: 6px;	
@@ -169,11 +179,13 @@ a:hover {
 
 .widget p {
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 12px;
+	font-size: 10px;
 	margin-bottom: 18px;
 }
 
 .widget a {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
 	color: #303e48;
 }
 
@@ -183,7 +195,7 @@ a:hover {
 
 .widget_nav_menu li {
 	border-top: 0;
-	padding: 8px 0 9px;
+	padding: 8px 0 0px;
 }
 
 .footer-sidebar .widget .widget-title,
@@ -191,7 +203,7 @@ a:hover {
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 1.6363636363;
-	margin: 0 0 6px 0;
+	margin: 0 0 2px 0;
 	color: #303e48;
 	text-transform: none;
 }
@@ -211,26 +223,31 @@ a:hover {
 *
 **************************************/
 
+.site-headerContainer {
+	background-color: #303e48;
+  max-width: 950px;
+	height: 120px;
+  margin-left: 16.6%;
+}
+
 .headerLogoLink {
-	background:transparent;
-   	border:none;
-   	outline:none;
-    display:block;
-	position:relative;
-	margin: auto;
-	margin-left: 16.6%;
-    height:77px;
-    width:67px;
-    cursor:pointer;
+	background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+	position: relative;
+	margin: 0 auto;
+  margin-top: 28px;
+  height: 67px;
+  width: 67px;
+  float: left;
+  cursor: pointer;
 }
 
 .headerLogo {
 	width: auto;
 	height: 67px;
-	padding-top: 28px;
 }
-
-
 
 .logoutBlock {
 	display: inline-block;
@@ -253,16 +270,15 @@ a:hover {
 
 .portnerLogoLink {
 	background:transparent;
-   	border:none;
-   	outline:none;
-    display:block;
-	position:relative;
-	margin-right: 12%;
-	margin-top: -40px;
+  border:none;
+  outline:none;
+  display:block;
+  margin: 0 auto;
+  margin-top: 28px;
 	float: right;
 	height: 40px;
 	width: 142px;	
-    cursor:pointer;
+  cursor:pointer;
 }
 
 .portnerLogo {
@@ -274,13 +290,45 @@ a:hover {
 	position: relative;
 	z-index: 15;
 	width: 100%;
+  height: 100%;
 	min-height: 220px;
+  background-color: #030202;
+}
+
+.headerMenubar {
+  width: 100%; 
+  height: 50px; 
+  background-color: #10181f;
+}
+
+.headerMenubarContent {
+  max-width: 950px; 
+  color: #ffffff; 
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+.headerMenubarContent a {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.headerMenubarContent a:hover {
+	color: #daf543
+}
+
+.headerMenubarDivider {
+  color: #daf543; 
+  font-size: 16px;
+}
+
+.headerFloat {
+  max-width: 950px;
 }
 
 .agoraLogin {
 	display: block;
 	position: absolute;
-	margin-left: 16.6%;
 }
 
 .agoraLoginPage {
@@ -299,64 +347,237 @@ a:hover {
 	font-weight: 400;
 }
 
+.indexImageContainer {
+  max-width: 1980px; 
+  max-height: 389px;
+  /*
+  w: 1980, h: 438
+  */
+  margin: 0 auto;
+}
+
 .indexImage {
 	background-color: #000;
 	width: 100%;
-	min-width: 900px;
 	height: auto;
 	min-height: 260px;
+  max-height: 389px;
 }
+
+#signupButton {
+	width: 440px;
+	height: 60px;
+	margin-top: 12px;
+	margin-left: 10.6%;
+	padding: 8px;
+	text-align: center;
+}
+
+#signupButton input[type="submit"] {
+	width: 100%;
+	height: 100%;
+	float: right;
+	margin-top: 4px;
+	padding: 4px 20px 4px;
+	
+	border-color : #96ce2b;
+	background: #96ce2b;
+	background: -moz-linear-gradient(top, #96ce2b 0%, #6bb325 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96ce2b), color-stop(100%,#6bb325));
+	background: -webkit-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -o-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -ms-linear-gradient(top, #96ce2b8 0%,#6bb325 100%);
+	background: linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96ce2b', endColorstr='#6bb325',GradientType=0 );
+	box-shadow: 0 0 10px #a9a9a9;
+	border: 0;
+	border-radius: 5px;
+	color: #000;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#signupButton input[type="submit"]:hover, 
+#signupButton input[type="submit"]:focus {
+	border-color : #6bb325;
+	background: #6bb325;
+	background: -moz-linear-gradient(top, #6bb325 0%, #96ce2b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6bb325), color-stop(100%,#96ce2b));
+	background: -webkit-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: -o-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: -ms-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bb325', endColorstr='#96ce2b',GradientType=0 );
+}
+
+/* order now lozenge type button combo */
+.lozengeWrapper {
+	margin-bottom: 46px;
+}
+.lozengeIntro {
+	width: 280px;
+	background: #00222e;
+	border-radius: 45px;
+	padding: 6px 20px 6px 0px;
+}
+.lozengeIntro p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 12px;
+	border: 0px none;
+	line-height: 2.5;
+}
+
+.lozengeButton {
+	width: 280px;
+	height: 65px;
+	position: absolute;
+  display: inline-block;
+  margin-left: 250px;
+  margin-top: -77px;
+}
+.lozengeArrow {
+	background-image: url(http://coradviser.com.au/wp-content/uploads/2015/05/orderArrow-sml.png);
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 45px;
+	margin: 27px 0 0 186px;
+	position: absolute;
+	z-index: 1;
+}
+.lozengeOrder {
+	width: 230px;
+	height: 51px;
+	cursor: pointer;
+	margin: 0 auto;
+	padding: 7px 0 0 25px;
+	border-radius: 45px;
+	display: inline-block;
+	position: absolute;
+	background: #96ce2b;
+	background: -moz-linear-gradient(top, #96ce2b 0%, #6bb325 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96ce2b), color-stop(100%,#6bb325));
+	background: -webkit-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -o-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -ms-linear-gradient(top, #96ce2b8 0%,#6bb325 100%);
+	background: linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96ce2b', endColorstr='#6bb325',GradientType=0 );
+}
+.lozengeText {
+	margin-top: 20px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.875em;
+	font-weight: 700;
+}
+
+.lozengeOrder:hover {
+	color: #ffffff;
+	background: #6bb325;
+}
+/* end lozenge */
 
 .indexMain {
 	display: block;
 	width: 100%;
-	padding-top: 50px;
+  float: left;
+	padding-top: 8px;
+}
+.indexIntroContainer {
+	max-width: 950px; 
+}
+.indexContainer {
+	max-width: 950px; 
+}
+.indexIntroText {
+  width: 60%;
+  height: 100%;
+  float: left;
 }
 
-.indexContent {
-	display: block;
-	margin: auto;
-	width: 84%;
-	max-width: 900px;
+.indexSidebar {
+  width: 40%;
+  max-width: 325px;
+  height: 100%;
+  float: right;
+}
+
+.indexSidebar img {
+  width: 100%;
+  height: auto;
+}
+.indexIntro {
 	float: left;
-	margin-left: 2%;
+  width: 90%;
+}
+
+.indexPromo {
+	float: left;
+	width: 90%;
+	list-style-image: url('http://coradviser.com.au/wp-content/uploads/2015/03/PTRCOR_icon.png');
+}
+
+li.indexCopy {
+	padding-bottom: 14px;
+}
+
+.indexPromoImage {
+	float: left;
+	padding-right: 12px;
+	background-color: #fff;
+	height: 10px;
+	width: 20px;
+}
+
+.indexHr {
+  background-color: #e1e1e1;
+  width: 100%;
+  max-width: 950px;
+  height: 1px;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.indexTheTeam {
+  width: 100%;
+  max-width: 950px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .indexAvatar {
+  width: 210px;
 	float: left;
-	padding-right: 24px;
-	padding-top: 28px;
+	padding-right: 64px;
+	padding-top: 4px;
+  margin-bottom: 12px;
 }
 
 .indexEditor {
-	display: inline-block;
-    margin: 0 auto;
-    width: 270px;
+  width: 28%;
+  max-width: 300px;
+  height: 100%;
 	float: left;
-}
-
-.indexAdvisor {
-	float: left;
-	width: 270px;
-	padding-left: 20px;
+  margin-right: 5%;
 }
 
 .indexPortner {
-	float: left;
-	width: 84%;
-	margin-top: 24px;
+	width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .indexTitle {
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
 	color: #333;
-	transform : scale(1,1.3);
-	-webkit-transform:scale(1,1.3); /* Safari and Chrome */
-	-moz-transform:scale(1,1.3); /* Firefox */
-	-ms-transform:scale(1,1.3); /* IE 9+ */
-	-o-transform:scale(1,1.3); /* Opera */
 }
 
 .indexCopy {
@@ -366,11 +587,20 @@ a:hover {
 	color: #333;
 }
 
+.indexCopy a {
+  text-decoration: none;
+  color: #67b812;
+}
+
+.issueFloat {
+  max-width: 950px;
+}
+
 #issueWrapper {
 	display: block;
-	margin-left: 8.3%;
+	padding-bottom: 24px;
 	float: left;
-	width: 60%;
+	width: 64%;
 }
 	
 .issueTitle {
@@ -382,30 +612,23 @@ a:hover {
 	width:100%;
 	position:relative;
 	background: #000;
-	height:120px;
+	height: 120px;
+  background: url('http://coradviser.com.au/wp-content/uploads/2015/02/corissue-banner.png');
 }
-
 .issuePageTitle {
-	position: absolute;
-	top: 6px;
 	z-index: 15;
 	color: #daf543;
 	font-family: 'Oswald', sans-serif;
 	font-size: 26pt;
 	font-weight: 300;
-	line-height: 100%;
+	line-height: 1;
+  margin: 0;
+  padding-top: 36px;
 }
-
-.issuePageImage {
-	background-color: #000;
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
 .listUnit {
 	float: left;
-	width: 100%;	
+	width: 100%;
+	padding-bottom; 24px;
 }
 
 .issueHeaderWrapper {
@@ -428,9 +651,8 @@ a:hover {
 .issueListWrapper {
 	width: 100%;
 	border-bottom: #959595 solid 3px;
-	margin-top:15px;
+	margin-top: 15px;
 	margin-bottom: 58px;
-	padding-top:20px;
 }
 
 .hrListTop {
@@ -469,7 +691,7 @@ a:hover {
 }
 
 .issueList ul {
-	list-style-image: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/downArrow.png');
+	list-style-image: url('http://coradviser.com.au/wp-content/uploads/2015/02/downArrow.png');
 	
 }
 
@@ -480,18 +702,19 @@ a:hover {
     height: 17px;
 }       
 .iconPdf > a:after{
-	background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/icon_pdf.jpg') no-repeat top right;
+	background: url('http://coradviser.com.au/wp-content/uploads/2015/02/icon_pdf.jpg') no-repeat top right;
 }
 .iconDoc > a:after{
-    background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/iconWord.jpg') no-repeat top right;
+    background: url('http://coradviser.com.au/wp-content/uploads/2015/02/iconWord.jpg') no-repeat top right;
 }
 /*
+not yet implemented
 .iconPpt > a:after{
-    background: url('/wp-content/uploads/2014/08/icon_ppt.jpg') no-repeat top right;
+    background: url('../iconPpt.jpg') no-repeat top right;
 }
 */
 .iconXls > a:after{
-    background: url('http://127.0.0.1/cor/wp-content/uploads/2015/02/iconExcel.jpg') no-repeat top right;
+    background: url('http://coradviser.com.au/wp-content/uploads/2015/02/iconExcel.jpg') no-repeat top right;
 }
 
 .portnerPressFooter {
@@ -501,11 +724,58 @@ a:hover {
 }
 
 .copyright {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
 	padding-bottom: 16px;
 }
 
 .socialMediaIcons  {
 	padding: 15px 0 15px 0;
+}
+
+.articleContent {
+	float: left;
+  width: 60%;
+  margin-top: 15px;
+}
+
+.articleFloat {
+  max-width: 950px;
+}
+.articleEditor {
+	float: left;
+  width: 100%;
+}
+
+.articleAvatar {
+	float: left;
+	padding-right: 24px;
+	padding-top: 4px;
+}
+
+p.articleByline {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+ul.articleListing {
+  font-size: 12px;
+  margin-bottom: 6px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+}
+
+.more-link {
+  color: #67b812; 
+}
+
+.sidebarHr {
+  background-color: #e1e1e1;
+  width: 300px;
+  height: 1px;
+	margin: 16px 0;
 }
 
 /**************
@@ -515,20 +785,15 @@ a:hover {
 **************/
 
 .mw_login {
-	width: 300px;
-	margin-top: 3%;		
+	width: 340px;
+	margin-top: 8%;		
 }
 		
 .mw_login .title {
 	color:#daf543; 
 	font-size:20px;
-	font-family: 'Noto Sans', sans-serif;			
-	font-weight: 700;
-	transform : scale(1,1.3);
-	-webkit-transform:scale(1,1.3); /* Safari and Chrome */
-	-moz-transform:scale(1,1.3); /* Firefox */
-	-ms-transform:scale(1,1.3); /* IE 9+ */
-	-o-transform:scale(1,1.3); /* Opera */
+	font-family: 'Oswald', sans-serif;			
+	font-weight: 400;
 	padding-bottom: 4%;
 }
 
@@ -552,6 +817,23 @@ a:hover {
 	margin-bottom: 12px;
 }
 
+p.login-username {
+	width: 100%;
+	height: 40px;
+}
+
+.mw_login label[for=user_login] {
+	font-size: 12px;
+	text-align: left;
+	color: #fff;
+}
+
+.mw_login label[for=user_pass] {
+	font-size: 12px;
+	text-align: left;
+	color: #fff;
+}
+
 .mw_login a {
 	text-decoration: none;
 }
@@ -567,36 +849,50 @@ a:hover {
 	padding-right: 0;
 }
 		
-.user-login {
-	display: none;
-}
-		
 .mw_loginform input[type='text'] {
-	float: left;
-	width: 100%;
-	height: 30px;
+	float: right;
+	width: 268px;
+	height: 32px;
 	padding: 2px 8px;
 	border: 1px solid black;
+	border-radius: 5px;
+	margin-bottom: 8px;
 	font-size: 16px;
 }
 		
 .mw_loginform input[type='password'] {
-	width: 100%;
-	height: 30px;
-	margin-top: 12px;
+	float: right;
+	width: 268px;
+	height: 32px;
+	padding: 2px 8px;
+	border: 1px solid black;
+	margin-top: 0px;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	font-size: 16px;
 }
-		
+
 .login-submit {
-	width: 80px;
+	float: right;
+	width: 90px;
 	height: 36px;
-}
+}		
 		
 .login-submit input[type="submit"] {
-	width: 80px;
+	width: 90px;
 	height: 36px;
-	float: left;
+	float: right;
+	margin-top: 4px;
 	padding: 4px 20px 4px;
-	background-color: #71b726;
+	border-color : #96ce2b;
+	background: #96ce2b;
+	background: -moz-linear-gradient(top, #96ce2b 0%, #6bb325 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96ce2b), color-stop(100%,#6bb325));
+	background: -webkit-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -o-linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	background: -ms-linear-gradient(top, #96ce2b8 0%,#6bb325 100%);
+	background: linear-gradient(top, #96ce2b 0%,#6bb325 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96ce2b', endColorstr='#6bb325',GradientType=0 );		
 	border: 0;
 	border-radius: 5px;
 	color: #ffffff;
@@ -607,18 +903,24 @@ a:hover {
 		
 .login-submit input[type="submit"]:hover, 
 .login-submit input[type="submit"]:focus {
-	background-color: #5bac0e;
-	color: #ffffff;
+	border-color : #6bb325;
+	background: #6bb325;
+	background: -moz-linear-gradient(top, #6bb325 0%, #96ce2b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6bb325), color-stop(100%,#96ce2b));
+	background: -webkit-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: -o-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: -ms-linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	background: linear-gradient(top, #6bb325 0%,#96ce2b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bb325', endColorstr='#96ce2b',GradientType=0 );
 }
 		
 .mw_forgot {
 	position: relative;
 	display: block;
-	width: 66%;
+	width: 33%;
 	float: right;
 	text-align: left;
-	padding-top: 4px;
-	margin-top: -50px;
+	padding-top: 6px;
 }
 		
 .mw_forgot_link  {
@@ -728,330 +1030,716 @@ a:hover {
 
 }
 
-/******************************************************
-*
-*	custom media queries + style.css overrides
-*
-*******************************************************/
+/* leadgen banner ad */
+.leadgenBannerContainer {
+  width: 90%;
+  max-width: 950px;
+  height: 100%;
+  max-height: 275px;
+  margin: 0 auto;
+  padding: 12px;
+  background-color: #cfe9f9;
+	background: -moz-linear-gradient(top, #f6fbfe 0%, #cfe9f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6fbfe), color-stop(100%,#cfe9f9));
+	background: -webkit-linear-gradient(top, #f6fbfe 0%,#cfe9f9 100%);
+	background: -o-linear-gradient(top, #f6fbfe 0%,#cfe9f9 100%);
+	background: -ms-linear-gradient(top, #f6fbfe9 0%,#cfe9f9 100%);
+	background: linear-gradient(top, #f6fbfe 0%,#cfe9f9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6fbfe', endColorstr='#cfe9f9',GradientType=0 );
+}
 
+.leadgenBanner {
+  max-width: 950px;
+  height: 100%;
+}
+
+.leadgenBannerTextContainer {
+  display: block; 
+	float: left;
+  width: 60%; 
+	height: auto;
+}
+.leadgenBannerText { 
+	float: left; 
+  padding-top: 36px; 
+  color: #000;
+}
+
+.leadgenBannerText img { 
+  margin-top: -12px;
+}
+.leadgenSignupFormContainer {
+  display: block;
+  position: relative;
+	float: right;
+  width: 320px;
+  height: 100%;
+  margin-top: 24px;
+}
+
+#leadgenSignupForm {
+	margin: 12px 0;
+  padding: 16px 12px;
+	background-color: #f2f2f2;
+	border-radius: 8px;
+  box-shadow: 0 0 10px #a9a9a9;
+}
+
+.leadgenFormField {
+  text-align: right; 
+  font-size: 12px; 
+  height: 28px;
+  margin-bottom: 4px;
+}
+
+.leadgenFormField input[type="submit"] {
+  width: 184px; 
+  height: 28px;
+  padding: 0;
+}
+
+.leadgenBannerFooter {
+	font-size: 10px;
+}
+
+/* Subscribe banner ad */
+
+.subBannerPromo {
+	width: 540px;
+	height: 320px;
+	display: block;
+	margin-left: 11%;
+	margin-bottom: 24px;
+}
+
+.subBannerPromo a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.subBannerLogo {
+	position: relative;
+	display: block;
+	float: left;
+	width: 120px;
+	height: 170px;
+	margin-top: 38px;
+	padding-left: 24px;
+}
+
+.subBannerIntro {
+	display: block;
+	position: relative;
+	margin-top: 30px;
+	float: left;
+	width: 340px;
+	height: 100px;
+}
+
+h2.subBanner {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 0.5px;
+	margin: 0;
+	line-height: 150%;
+}
+
+.subBannerListing {
+	display: block;
+	position: relative;
+	width: 340px;
+	float: left;
+	margin-bottom: 12px;
+}
+
+ul.subBannerList {
+	list-style: disc;
+	color: #daf543;
+	padding-right: 12px;
+	margin: 0 0 12px 16px;
+}
+
+ul.subBannerList li {
+	color: #daf543;
+	margin-bottom: 12px;
+}
+
+.subBanner p {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #030202;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+/**************
+
+	Email/Landing 
+	Bulletin templates
+
+**************/
+
+/* email template */
+
+.emailMain {
+	display: block;
+	width: 100%;
+	padding-top: 0px;
+}
+
+.containerNarrow {
+	display: block;
+	max-width: 650px;
+	width: 95%;
+	height: 100%;
+  margin: 0 auto;
+}
+
+.contentBlock {
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 6px;
+	margin-bottom: 0px;
+	color: #000;
+	text-align: left;
+	font-size: 14px;
+}
+
+#megaButton {
+	margin-top: 24px;
+	margin-bottom: 24px;
+	margin-left: 2%;
+	max-width: 444px;
+	background-color: #ececec;
+	border: solid 2px #cdcccc;
+	border-radius: 5px;
+	text-align: center;
+	padding-top: 12px;	
+}
+
+a.reportLink {
+	font-size: 18px;
+	color: #67b812;
+	text-decoration: none;
+}
+a:active.reportLink,
+a:hover.reportLink {
+	color: #95d21f;
+}
+
+hr#emailLine {
+	display: block;
+	height:2px;
+	width: 100%;
+	border-width:0;
+	color: #cdcccc;
+	background-color: #cdcccc;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+#emailIntroImage img{
+	width: 254px;
+	height: 114px;
+	float: left;
+	margin-right: 50%;
+	margin-bottom: 30px;
+}
+
+h2#emailHeading {
+	font-size: 24px;
+}
+
+/* landing/signup template */
+
+.landerMain {
+	display: block;
+	width: 100%;
+	padding-top: 0px;
+}
+
+#landingWrapper {
+	width: 95%;
+	max-width: 700px;
+	height: 100%;
+  margin: 0 auto;
+}
+
+#landingWrapper hr {
+	height:2px;
+	border-width:0;
+	color: #cdcccc;
+	background-color: #cdcccc;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#landingWrapper td {
+	padding: 0px;
+	float: right;
+}
+
+#landingImage img{
+	max-width: 340px;
+	height: auto;
+	float: left;
+	margin-top: 12px;
+}
+
+#landingWrapper #introImage {
+	padding-bottom: 4px;
+}
+
+#landingWrapper input[type="submit"] {
+	background: #67b812; /* Old browsers */
+	background: -moz-linear-gradient(top,  #67b812 0%, #95d21f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67b812), color-stop(100%,#95d21f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #67b812 0%,#95d21f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67b812', endColorstr='#95d21f',GradientType=0 ); /* IE6-9 */
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 5px;
+	padding: 8px 18px;
+	margin-left: 107px;
+}
+
+#landingWrapper input[type="submit"]:hover {
+	background: #67b812;
+}
+
+#leftLanding {
+	max-width: 340px;
+	float: left; 
+	display: block;
+	margin-right: 24px;
+	margin-bottom: 2px;
+}
+
+#rightlanding { 
+	max-width: 340px;
+	float: left;
+	display: block;
+	margin-left: 48px;
+	margin-bottom: 12px;
+}
+
+ul#landing {
+	list-style-type: disc;
+	color: #67b812;
+	padding: 0px;
+	margin: 12px;
+	padding-left: 18px;
+}
+ul li.landingList {
+	background-position: 0px top;
+	padding-left: 6px;
+	padding-bottom: 12px;
+	font-size: 14px;
+}
+
+#landingSignupForm  {
+	display: block;
+	float: left;
+	width: 360px;
+	height: 220px;
+	background-color: #efefef;
+	border-radius: 5px;
+	padding: 12px;
+}
+
+#landingSignupForm label {
+	font-size:12px;
+}
+
+input.landingSignup {
+	margin-top:10px;
+	width: 240px;
+	height: 30px;
+	margin-left: 10px;
+	border-color: lightgrey;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	font-size:12px;
+}
+
+.containerFooter {
+	display: block;
+	max-width: 600px;
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.containerFooter p {
+	font-size: 12px;
+}
+
+/* Bulletin template */
+#CORLogo {
+	width: auto;
+	height: 47px;
+	padding-top: 28px;
+}
+
+#bulletinLogo {
+	position: relative;
+	margin-top: -46px;
+	margin-left: 90px;
+	width: 118px;
+	height: 45px;
+}
+
+#bulletinWrapper {
+	max-width: 644px;
+  margin: 0 auto;
+}
+
+#bulletinWrapper p {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #030202;
+	line-height: normal;
+	letter-spacing: normal;
+}
+
+#bulletinWrapper ul#newsbrief {
+	width: 270px;
+	list-style-image: url('http://coradviser.com.au/wp-content/uploads/2015/03/COR-Email-bulletpoint.gif');
+	padding-right: 12px;
+	margin-left: 12px;
+}
+		
+#bulletinWrapper ul li {
+	font-size: 14px;
+	color: #000;
+	font-weight: 700;
+	padding-bottom: 22px;
+	padding-right: 22px;
+}
+
+ul#benefits {
+	list-style: disc;
+	color: #daf543;
+	padding-right: 12px;
+	margin: 0 0 0 12px;
+}
+
+ul#benefits li {
+	color: #daf543;
+}
+
+.bulletinPromo {
+	width: 540px;
+	height: 320px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+
+#bulletinBanner {
+	display: block;
+	float: left;
+	width: 104px;
+	height: 274px;
+	padding-top: 46px;
+	padding-left: 36px;
+}
+
+#bulletinSubscribe {
+	position: relative;
+	display: block;
+	float: left;
+	width: 380px;
+	height: 82px;
+	padding-top: 38px;
+	padding-left: 20px;
+}
+
+#bulletinBenefits {
+	display: block;
+	width: 380px;
+	float: left;
+	padding-left: 20px;
+	margin-bottom: 12px;
+}
+
+h2.bulletinSub {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 0.5px;
+	margin-top: 0;
+	line-height: 150%;
+}
+
+h2.bulletinHeading {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: #030202; 
+	letter-spacing: 0.5px;
+}
+
+h3.bulletinHeading {
+	font-size: 15px;
+	line-height: 250%;
+	letter-spacing: 0.5px;
+}
+
+p.bulletinSub {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #fff; 
+	letter-spacing: 0.5px;
+}
+
+hr.bulletin {
+	height:2px;
+	border-width:0;
+	color: #cdcccc;
+	background-color: #cdcccc;
+	margin-top: 18px;
+}
+
+.bulletinButton {
+	background: #67b812; /* Old browsers */
+	background: -moz-linear-gradient(top,  #67b812 0%, #95d21f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67b812), color-stop(100%,#95d21f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #67b812 0%,#95d21f 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #67b812 0%,#95d21f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67b812', endColorstr='#95d21f',GradientType=0 ); /* IE6-9 */
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 5px;
+	padding: 4px 8px;
+	margin-top: 14px;
+	margin-left: 107px;
+}
+
+.bulletinButton:hover {
+	background: #67b812;
+}
+
+.bulletinBlock {
+	max-width: 540px;
+}
+
+.bulletinNewsbrief {
+	width: 321px;
+	height: 100%;
+	float: left;
+	padding-top: 8px;
+}
+
+.bulletinSpacer {
+	display: block-inline;
+	position: relative;
+	width: 2px;
+	height: 325px;
+	float: left;
+	background-color: #c0c5c8;
+}
+
+.bulletinHelpdesk {
+	width: 305px;
+	float: left;
+	padding-top: 8px;
+	padding-left: 16px;
+	text-align: center;
+}
+/******************************************************
+*	custom media queries + style.css overrides
+*******************************************************/
 @-ms-viewport {
 	width: device-width;
 }
-
 @viewport {
 	width: device-width;
 }
-
-@media screen and (max-width: 399px) {
-	.site {
-		min-width: 399px;
+@media screen and (max-width: 950px) {	
+	.leadgenSignupFormContainer {
+    float: none;
+    margin: 0 auto;
+    padding: 12px 0;
+    position: relative;
+    clear: both;
+  }
+  .leadgenBannerTextContainer {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .leadgenBannerText img { 
+    display: none;
+  }
+  #signupButton {
+		white-space: normal;
+		margin-left: 0%;
+		width: 80%;
+		height: 80px;
 	}
-	
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.headerLogoLink {
-		margin-left: 8.3%;
-	}	
-	
-	.listUnit {
-		margin-left: 2%;
-	}
-	
-	.issueListWrapper {
-		width: 88%;
-	}
-	
-	.issueList {
-		width: 100%;
-	}
-	
-	.issueThumb {
-		display: none;
-	}
-	
-	.indexContent {
-		min-width: 399px;
-	}
-	
-	.indexAvatar {
-		display: none;
-	}
-	
-	.indexAdvisor {
-		float: left;
-		padding-left: 0;
-		margin-left: 0;
-	}
-	
-	#mw_reset input[type="submit"] {
-		margin: -44px 0 0 190px !important;
-	}
-
-}
-
-@media screen and (min-width: 400px) {
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.headerLogoLink {
-		margin-left: 8.3%;
-	}
-	
-	.agoraLogin {
-		margin-left: 8.3%;
-	}	
-	
-	.issueList {
-		width: 100%;
-	}
-	
-	.indexContent {
-		min-width: 400px;
-		width: 90%;
-		margin-left: 8.3%;
-	}
-	
-	.indexAvatar {
-		display: none;
-	}
-	
-	.indexAdvisor {
-		float: left;
-		padding-left: 1%;
-		margin-left: 0;
-	}
-}
-
-
-@media screen and (max-width: 673px) {
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.indexContent {
-		width: 90%;
-		margin-left: 2%;
-	}
-	
-	.indexAvatar {
-		display: none;
-	}
-	
-	.indexEditor {
-		margin-left: 8.3%;
-	}
-	
-	.indexAdvisor {
-		float: left;
-		margin-left: 8.3%;
-		margin-top: 40px;
-	}
-	
-	.listUnit {
-		margin-left: 8.3%;
-	}
-	
-	.issueListWrapper {
-		width: 88%;
-		max-width: 620px;
-	}
-	
-	.issueThumb {
-		display: none;
-	}
-	
-	.issueList {
-		width: 100%;
-	}
-	
-	#secondary,
-	#supplementary {
-		padding: 2% 8% 2% 16.6%;
-	}
-	
-	.content-sidebar {
-		border: 0;
-		position: relative;
-		padding: 10px 20px 10px;
-		width: 300px;
-		margin-bottom: 8px;
-		margin-left: 0;
-	}	
-
-	.portnerPressFooter,
-	.ppFooterLogo {
-		padding-top: 20px;
-		padding-bottom: 16px;
-		float: left;
-		text-align: left;
-	}
-}
-
-@media screen and (min-width: 783px) {
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.headerLogoLink {
-		margin-left: 8.3%;
-	}
-	
-	.indexAvatar {
-		display: none;
-	}
-	
-	.issueList {
-		width: 100%;
-	}
-}
-
-
-@media screen and (min-width: 810px) {
 	.indexContent {
 		width: 90%;
 		margin-left: 8.3%;
+	} 
+  .indexIntroText {
+    width: 100%;
+  }
+	.lozengeButton {
+		margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 260px;
 	}
-	
-	.indexAdvisor {
-		margin-top: 0;
-		float: left;
-		margin-left: 2%;
+	.lozengeArrow {
+		margin: 6px 0 0 198px;
 	}
-	
-	.indexAvatar {
-		display: block;
+	.lozengeIntro {
+    width: 240px;
+    margin: 0 auto;
 	}
-	
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.issueList {
-		float: left;
-		width: 100%;
-	}
-}
-	
-/*
-* 
-*	Major break point for corissues layout (900-901px)
-*
-*/
-
-@media screen and (max-width: 900px) {	
-	.headerLogoLink {
-		margin-left: 8.3%;
-	}
-	
-	.headerWrapper {
-		margin-left: 8.3%;
-	}
-	
-	.indexContent {
-		width: 90%;
-		margin-left: 8.3%;
-	}
-	
+  .lozengeIntro p {
+    font-size: 17px;
+  }
+  .lozengeText {
+    margin-top: 0;
+  }	
+  .indexEditor {
+    float: none;
+    width: 340px;
+    margin: 0 auto;
+  }
+  .indexPortner {
+    margin-right: 4%;
+  }
+  .indexSidebar {
+    float: none;
+    margin: 0 auto;
+    padding-right: 4%;
+    min-width: 280px;
+  } 
 	.indexAdvisor {
 		margin-left: 6%;
-	}
-	
+	}	
 	#issueWrapper {
-
+    float: none;
+    width: 90%;
+    margin-left: 4%;
 	}
-
-	
 	.issueThumb {
 		display: none;
 	}
-	
 	.issueListWrapper {
 		width: 100%;
-	}
-	
+	}	
 	.issueList {
 		float: left;
 		width: 100%;
 	}
-	
-	.listUnit {
-		width: 80%;
-		margin-left: 4%;
+	.articleContent {
+    width: 90%;
+    float: none;
+    margin-left: 4%;
+  }
+  .site-headerContainer {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+	.headerMenubarContent {
+    margin-left: 4%;
+  }  
+  .headerFloat {
+    margin-left: 4%;
+  }
+	#supplementary {
+    width: 320px;
+    margin: 0 auto;
+    margin-left: 30%;
 	}
-	
-	.portnerPressFooter {
+	#content-sidebar {
+    margin: 0 auto;
+    margin-bottom: 12px;
+	}
+	.content-sidebar {
+    clear: both;
+    margin: 0 auto;
+    width: 340px;
+    float: none;
+	}
+	.containerFooter {
+		margin-left: 8.3%;
+	}
+  .portnerPressFooter {
 		float: left;
 		text-align: left;
 	}
-	
-	#supplementary {
-		padding: 2% 8% 2% 16.6%;
-	}
-	
-	.content-sidebar {
-		border: 0;
-		position: relative;
-		padding: 10px 20px 10px;
-		width: 300px;
-		float: left;
-		margin-left: 8.3%;
-		margin-bottom: 8px;
-	}
 }
-
-@media screen and (min-width: 901px) {	
-	.headerLogoLink {
-		margin-left: 16.6%;
-	}
-	
-	.portnerLogoLink {
-		margin-right: 20%;
-	}
-	
-	.headerWrapper {
-		margin-left: 16.6%;
-	}
-	
-	.agoraLogin {
-		margin-left: 16.6%;
-	}
-	
+@media screen and (min-width: 951px) {	
+  .headerFloat {
+    margin: 0 auto;
+  }
+  .site-headerContainer {
+    margin: 0 auto;
+  }
+	.headerMenubarContent {
+    margin: 0 auto;;
+  }
+  .leadgenBanner {
+    margin: 0 auto;
+  }
+  .indexIntroContainer {
+    margin: 0 auto;     
+  }
+  .indexContainer {
+    margin: 0 auto;
+  }
+  .issueFloat {
+    margin: 0 auto;
+  }
 	.issueThumb {
 		display: block;
-	}
-	
+	}	
 	.issueList {
 		float: right;
 		width: 66%;
 	}
-	
-	.indexContent {
-		margin-left: 16.6%;
-	}
-	
+  .articleFloat {
+    margin: 0 auto;
+  }
 	.indexAvatar {
 		display: block;
-	}
-	
+	}	
 	.indexAdvisor {
 		margin-left: 6%;
-	}
-	
+	}	
 	.textwidget {
 		padding-top: 0;
-	}
-	
+	}	
 	#supplementary {
-		padding: 2% 16% 2% 16.6%;
-	}
-	
+		margin: 0 auto;
+	}	
 	.content-sidebar {
 		margin-left: 2%;
-	}
-	
+	}  
 	.footer-sidebar .widget {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing:    border-box;
@@ -1059,15 +1747,5 @@ a:hover {
 		float: left;
 		padding: 0;
 		width: 25%;
-	}
-	
-	.mw_login {
-		margin-top: 12%;		
-	}
-	
-	/*
-	#secondary {
-		display: none;
-	}
-	*/
+	} 
 }
