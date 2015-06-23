@@ -83,8 +83,12 @@
 	<br />
 	<strong>Custom post Insights (insights)</strong>
 	<br />
-	<em>template files and custom post type for Industry Insights, archive-insights.php template, custom excerpt and length=17, has_archive = true</em>  
+	<em>template files and custom post type for Industry Insights, archive-insights.php template, custom excerpt and length=17, has_archive = true</em>
+	<br />
+	<br />
+	<strong>Custom post Article (article)</strong>
+	<br />
+	<em>template files and custom post type for Articles, archive-article.php template, excerpts as above, has_archive = true</em>
 	</p>
-<!-- start of options form -->
 
 </div>

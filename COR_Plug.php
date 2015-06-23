@@ -3,7 +3,7 @@
  * Plugin Name: COR Plug
  * Plugin URI: http://www.coradviser.com.au
  * Description: Add functions to COR 2015 theme. Production Version.
- * Version: 1.3.5
+ * Version: 1.3.6
  * Author: MA_PPP
  * Author URI: http://www.portphillippublishing.com.au
  * Text Domain: twentyfourteen
@@ -41,7 +41,7 @@ init_admin_page();
 
 define( 'COR_PLUG_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'COR_PLUG_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'COR_PLUG_VERSION', '1.3.5' );
+define( 'COR_PLUG_VERSION', '1.3.6' );
 
 // library functions called here
 require_once( COR_PLUG_DIR_PATH . 'lib/function_list.php' );
@@ -55,6 +55,7 @@ function register_plugin_addons() {
 	// corissue_main.php
 	add_action( 'init', 'create_new_post_type_corissue' );
   add_action( 'init', 'create_new_post_type_insights' );
+  add_action( 'init', 'create_new_post_type_article' );
 	// auxillary.php
 	add_filter( 'widget_text', 'execute_php', 100 );
 	// this

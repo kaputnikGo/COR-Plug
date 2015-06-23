@@ -46,6 +46,31 @@ function create_new_post_type_insights() {
     register_post_type('insights', $args);
 }
 
+// create Article posts type with item on wp-admin page menu
+function create_new_post_type_article() {
+    $labels = array(
+        'name'           => __('Article'),
+        'singular_name'  => __('Article'),
+    );
+    $args = array(
+        'labels'         => $labels,
+        'public'         => true,
+        'has_archive'    => true,
+        'menu_position'  => 4,
+        'description'    => 'CoR Article',
+        'supports'       =>
+            array( 'title',
+                'comments', 'editor',
+                'thumbnail', 'custom-fields', 'revisions'),
+    );
+    register_post_type('article', $args);
+}
+
+
+/*
+  debugging bit below, 
+  appears on plugin admin page
+*/
 //list all the COR Issue posts on the COR Plug admin page - for debugging.
 function return_corissue_posts_list() {
 	// get all corissue posts by title
