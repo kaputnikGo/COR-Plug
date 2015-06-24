@@ -3,7 +3,7 @@
  * Plugin Name: COR Plug
  * Plugin URI: http://www.coradviser.com.au
  * Description: Add functions to COR 2015 theme. Production Version.
- * Version: 1.4.1
+ * Version: 1.5.0
  * Author: MA_PPP
  * Author URI: http://www.portphillippublishing.com.au
  * Text Domain: twentyfourteen
@@ -41,7 +41,7 @@ init_admin_page();
 
 define( 'COR_PLUG_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'COR_PLUG_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'COR_PLUG_VERSION', '1.4.1' );
+define( 'COR_PLUG_VERSION', '1.5.0' );
 
 // library functions called here
 require_once( COR_PLUG_DIR_PATH . 'lib/function_list.php' );
@@ -66,6 +66,8 @@ function register_plugin_addons() {
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	// this
   add_shortcode('cor_get_sidebar', 'cor_sidebar_shortcode');
+  // this
+  add_filter( 'pre_get_posts', 'cor_custom_feed' );
   //
 }
 
@@ -115,4 +117,12 @@ function custom_excerpt_length( $length ) {
 function custom_excerpt_more( $more ) {
 	return '&hellip; <a class="more-link" href="' . get_permalink( get_the_ID() ) . '"> Read more&hellip;</a>';
 }
+
+// Add custom post types - article and insights to main rss feed, not corissue.
+function cor_custom_feed( $query ) {
+        if ( $query->is_feed() )
+            $query->set( 'post_type', array( 'article', 'insights' ) ); 
+        return $query;
+}
+
 ?>

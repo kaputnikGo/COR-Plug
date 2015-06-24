@@ -94,6 +94,11 @@
 	<strong>cor_get_sidebar shortcode</strong>
 	<br />
 	<em>shortcode to call index sidebar from within index page content: &#91;cor_get_sidebar&#93;</em>
+  	<br />
+	<br />
+	<strong>cor_custom_feed</strong>
+	<br />
+	<em>add insights and article custom posts to main rss feed, not corissue</em>
   </p>
 
 </div>
