@@ -89,6 +89,11 @@
 	<strong>Custom post Article (article)</strong>
 	<br />
 	<em>template files and custom post type for Articles, archive-article.php template, excerpts as above, has_archive = true</em>
-	</p>
+	<br />
+	<br />
+	<strong>cor_get_sidebar shortcode</strong>
+	<br />
+	<em>shortcode to call index sidebar from within index page content: &#91;cor_get_sidebar&#93;</em>
+  </p>
 
 </div>

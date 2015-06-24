@@ -3,7 +3,7 @@
  * Plugin Name: COR Plug
  * Plugin URI: http://www.coradviser.com.au
  * Description: Add functions to COR 2015 theme. Production Version.
- * Version: 1.3.6
+ * Version: 1.4.1
  * Author: MA_PPP
  * Author URI: http://www.portphillippublishing.com.au
  * Text Domain: twentyfourteen
@@ -41,7 +41,7 @@ init_admin_page();
 
 define( 'COR_PLUG_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'COR_PLUG_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'COR_PLUG_VERSION', '1.3.6' );
+define( 'COR_PLUG_VERSION', '1.4.1' );
 
 // library functions called here
 require_once( COR_PLUG_DIR_PATH . 'lib/function_list.php' );
@@ -64,7 +64,9 @@ function register_plugin_addons() {
   add_filter( 'excerpt_more', 'custom_excerpt_more', 100 );
   // this
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-	//
+	// this
+  add_shortcode('cor_get_sidebar', 'cor_sidebar_shortcode');
+  //
 }
 
 function initialise_menu() {
@@ -95,6 +97,15 @@ function init_admin_page() {
 	echo '<br />debug:<br />';
 	get_corissue_posts_list();
 	echo 'end debug.<br />';
+}
+
+// enable call of sidebar from post
+function cor_sidebar_shortcode(){
+  ob_start();
+  get_sidebar("index");
+  $sidebar= ob_get_contents();
+  ob_end_clean();
+  return $sidebar;
 }
 
 // functions for excerpts in article/insights template pages
